@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--flexible css 初始化-->
+    <script src='lib/flexible/flexible_css.js'></script>
+    <!--flexible适配插件-->
+    <script src='lib/flexible/flexible.js'></script>
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+<!--头部开始-->
+<header>
+    <div class="h_buy">
+        <a href="#">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="h_downLoad">
+        <a href="#">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<!--头部结束-->
+
+<!--搜索框开始-->
+<div class="search">
+    <div class="search_s">
+        <input type="text" class='search_content' placeholder='请输入你想比较的商品'>
+        <input type="button" class='s_b' value='搜索'>
+    </div>
+</div>
+<!--搜索框结束-->
+
+<!--三级导航开始-->
+<div class="classifyList">
+    <a href="index.html">首页 > </a>
+    <a href="#" class='aa'> 全部分类 > </a>
+    <a href="" class='proContent'> 影院 </a>
+</div>
+<!--三级导航结束-->
+
+<!--产品内容开始-->
+<div class="product">
+    <script type='text/html' id='pImg'>
+    {{each result v i}}
+    <div class='product_img'>
+        {{#v.productImg}}
+    </div>
+    <div class='product_content'>{{v.productName}}</div>
+    <ul class='product_list clearfix'>
+        <li><a href="#">比价购买</a></li>
+        <li><a href="#">产品参数</a></li>
+        <li><a href="#">优选评价</a></li>
+    </ul>
+    {{#v.bjShop}}
+        {{/each}}
+</script>
+    <!--<img src="" alt="" class='product_img'>-->
+    <!--<div class='product_content'>苹果Apple iPhone7 Plus (A1661) 32G 玫瑰金色 全网通4G手机</div>-->
+
+    <!--<ul class='clearfix buy'>-->
+        <!--<li>-->
+            <!--<img src="images/slogo.png" alt="" class='buyImage'>-->
+        <!--</li>-->
+        <!--<li>1号点</li>-->
+        <!--<li>￥6848</li>-->
+        <!--<li><a href="#" class='goBuy'>去购买</a></li>-->
+    <!--</ul>-->
+</div>
+<!--产品内容结束-->
+
+<!--网友评价开始-->
+<div class="eval">
+    <div class="evalHeader">
+        网友评价
+    </div>
+    <div class='evalContent'>
+        <ul>
+            <li>
+                <div class='clearfix phone'>
+                    <span>137*****21</span>
+                    <span>2016/10/14</span>
+                </div>
+                <div class='sn'>购买自：苏宁易购</div>
+                <div class='text'>特意用了十来天再来评论。玫瑰金真是美美哒！系统还是一如既往的流畅，电池的续航能力感觉好多了，轻度使用的话，一天多不成问题。外放的音量很大，音质也还不错。拍照画质也很好。唯一觉得不足的是，在室内手机信号好像一直都是一格，但不影响使用就是了</div>
+            </li>
+            <li>
+                <div class='clearfix phone'>
+                    <span>137*****21</span>
+                    <span>2016/10/14</span>
+                </div>
+                <div class='sn'>购买自：苏宁易购</div>
+                <div class='text'>特意用了十来天再来评论。玫瑰金真是美美哒！系统还是一如既往的流畅，电池的续航能力感觉好多了，轻度使用的话，一天多不成问题。外放的音量很大，音质也还不错。拍照画质也很好。唯一觉得不足的是，在室内手机信号好像一直都是一格，但不影响使用就是了</div>
+            </li>
+        </ul>
+    </div>
+    <div class='moreText'>
+        <div class='moreTextX'>查看更多评价>></div>
+    </div>
+</div>
+<!--网友评价结束-->
+
+
+
+
+
+<!--注册登录开始-->
+<footer>
+    <div class="login">
+        <ul>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#"><i class='login_back'>回到顶部</i></a></li>
+        </ul>
+    </div>
+    <div class='footer_download'>
+        <div>
+            <a href="#" class='down'>手机APP下载</a>
+            <a href="#" class='mobile'>慢慢买手机版</a>
+            <a href="#" class='compare'>--掌上比价平台</a>
+        </div>
+        <div>
+            <a href="#">
+                m.manmanbuy.com
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!--注册登录结束-->
+</body>
+<script src='js/jquery-1.12.4.js'></script>
+<script src='lib/art/template-web.js'></script>
+<script src='js/model.js'></script>
+<script src='js/product.js'></script>
+<script type='text/html' id='page'>
+    {{each arr v i}}
+    <option value='{{i+1}}'>第{{i+1}}页</option>
+    {{/each}}
+</script>
+
+</html>

@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@import "model";
+
+.classifyList{
+  height: 58*@rem;
+  padding: 0 14*@rem;
+  background-color: #5a5a5a;
+  a{
+    display: block;
+    float: left;
+    height: 58*@rem;
+    line-height: 58*@rem;
+    color: #fff;
+    .font-size(16);
+    margin-left: 5*@rem;
+  }
+}
+//产品
+.product {
+  ul {
+    li {
+      padding: 20*@rem 20*@rem;
+      //border: 1px solid red;
+      height: 184*@rem;
+      position: relative;
+      width: 100%;
+      .product_img {
+        position: absolute;
+        a {
+          display: block;
+          img {
+            display: block;
+            width: 172*@rem;
+            height: 172*@rem;
+            //margin-top: 10*@rem;
+          }
+        }
+      }
+      .product_content {
+        height: 100%;
+        margin-left: 172*@rem;
+        padding-left: 20*@rem;
+        .product_price {
+          margin-top: 10*@rem;
+          .font-size(14);
+          color: #333;
+        }
+        .product_date {
+
+          margin-top: 20*@rem;
+          .font-size(12);
+          color: gray;
+          .product_comment {
+            float: right;
+            padding-left: 26*@rem;
+            position: relative;
+            .paroduct_msg {
+              position: absolute;
+              width: 22*@rem;
+              height: 20*@rem;
+              left: 0;
+              background: url('../images/comment.svg') no-repeat center;
+              top: -3*@rem;
+            }
+
+          }
+
+        }
+      }
+
+    }
+  }
+  .pricep{
+    margin-top: 60*@rem;
+    color: red;
+    .font-size(18);
+  }
+.p_date{
+  float: left;
+}
+  .product_comment{
+    float: right;
+  }
+}
+
+//分页
+.page{
+  margin-bottom: 20*@rem;
+  margin-top: 20*@rem;
+  div{
+    float: left;
+    height: 46*@rem;
+    line-height: 36*@rem;
+    text-align: center;
+    .font-size(14);
+    width:33.33%;
+    padding:5*@rem ;
+  }
+  .prev,.next{
+    border-radius: 6*@rem;
+    border: 1px solid #bababa;
+    background-color: #d4d4d4;
+  }
+  .select{
+    padding: 0 5*@rem;
+    #pages{
+      margin: 0 auto;
+      width: 115*@rem;
+      display: block;
+      height: 100%;
+      .font-size(18);
+      option{
+        text-align: center;
+        .font-size(18);
+      }
+    }
+  }
+
+}

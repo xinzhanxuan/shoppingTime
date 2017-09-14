@@ -1,0 +1,159 @@
+@charset "UTF-8";
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+table,
+tr,
+td,
+p,
+a,
+img,
+section,
+header,
+nav,
+footer,
+main,
+input {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fff;
+  color: #5a5a5a;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+img {
+  display: block;
+  width: 100%;
+}
+input,
+button,
+img,
+textarea {
+  border: none;
+  outline-style: none;
+}
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:hover {
+  color: #5a5a5a;
+}
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h5,
+h4,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+i,
+em {
+  font-style: normal;
+}
+.one-txt-cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.text_cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+.classify {
+  padding: 0.199995rem;
+}
+.classify ul {
+  border-radius: 0.13333rem;
+}
+.classify ul li:nth-child(1) .classify_tit {
+  border-top-left-radius: 0.066665rem;
+  border-top-right-radius: 0.066665rem;
+}
+.classify ul li:last-child .classify_tit {
+  border-bottom-left-radius: 0.066665rem;
+  border-bottom-right-radius: 0.066665rem;
+}
+.classify .classify_tit {
+  padding: 0 0.26666rem;
+  height: 0.773314rem;
+  line-height: 0.773314rem;
+  background-color: #eee;
+  border-bottom: 1px solid #bbb;
+}
+.classify .classify_tit a {
+  font-weight: bold;
+  color: #000;
+}
+[data-dpr='1'] .classify .classify_tit a {
+  font-size: 16px;
+}
+[data-dpr='2'] .classify .classify_tit a {
+  font-size: 32px;
+}
+[data-dpr="3"] .classify .classify_tit a {
+  font-size: 48px;
+}
+.classify .classify_info ul li {
+  background-color: #fff;
+  float: left;
+  width: 33.33%;
+  height: 0.773314rem;
+  line-height: 0.773314rem;
+  border: 1px solid #cccccc;
+  text-align: center;
+}
+.classify .classify_info ul li a {
+  color: #333;
+}
+.classify .classify_info ul li {
+  border-top: none;
+}
+.classify .classify_info ul li:nth-child(3n + 1) {
+  border-right: none;
+}
+.classify .classify_info ul li:nth-child(3n + 2) {
+  border-right: none;
+}
+.classify .classify_info ul li:last-child {
+  border-right: 1px solid #cccccc;
+}

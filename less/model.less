@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import "px2rem";
+@import "base";
+//头部
+header {
+  background-color: #ff841d;
+  height: 63*@rem;
+  overflow: hidden;
+  width: 100%;
+  .h_buy {
+    float: left;
+    width: 256*@rem;
+    height: 35*@rem;
+    margin-left: 17*@rem;
+    margin-top: 14px;
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    img {
+      display: block;
+      width: 256*@rem;
+    }
+  }
+  .h_downLoad {
+    float: right;
+    width: 46*@rem;
+    height: 46*@rem;
+    margin-right: 17*@rem;
+    margin-top: 8.5*@rem;
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//搜索框
+.search {
+  height: 72*@rem;
+  padding: 14*@rem;
+  width: 100%;
+  position: relative;
+  .search_s {
+    height: 43*@rem;
+    width: 100%;
+    position: relative;
+    .search_content {
+      position: absolute;
+      background-color: #f1f1f1;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 0 22*@rem;
+      border-radius: 20*@rem;
+      .font-size(16);
+    }
+    .s_b {
+      width: 91*@rem;
+      height: 100%;
+      position: absolute;
+      background-color: #ff841d;
+      border-radius: 20*@rem;
+      right: 0;
+      .font-size(16);
+      color: white;
+
+    }
+
+  }
+
+}
+
+
+
+
+//注册登录
+footer {
+  margin-top: 10*@rem;
+  height: 137*@rem;
+}
+
+.login {
+  ul {
+    display: flex;
+    li {
+      float: left;
+      flex: 1;
+      text-align: center;
+      border: 1px solid #ccc;
+      height: 49*@rem;
+      line-height: 49*@rem;
+      a{
+        .font-size(14);
+      }
+      /**
+       * Created by aaaaa on 2017/7/23.
+       */
+    }
+    li:nth-child(1){
+      border-right: none;
+    }
+    li:nth-child(3){
+      border-left: none;
+    }
+  }
+}
+.footer_download{
+  padding: 28*@rem;
+  text-align: center;
+  a{
+    margin-right: 2*@rem;
+  }
+  .down{
+    color: red;
+  }
+  .mobile{
+    color: #000;
+  }
+  .compare{
+    color: #8d8d8d;
+  }
+}

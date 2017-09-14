@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--flexible css 初始化-->
+    <script src='lib/flexible/flexible_css.js'></script>
+    <!--flexible适配插件-->
+    <script src='lib/flexible/flexible.js'></script>
+    <link rel="stylesheet" href="css/model.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<!--头部开始-->
+<header>
+    <div class="h_buy">
+        <a href="#">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="h_downLoad">
+        <a href="#">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<!--头部结束-->
+
+<!--搜索框开始-->
+<div class="search">
+    <div class="search_s">
+        <input type="text" class='search_content' placeholder='请输入你想比较的商品'>
+        <input type="button" class='s_b' value='搜索'>
+    </div>
+</div>
+<!--搜索框结束-->
+
+<!--导航栏开始-->
+<div class="nav">
+    <ul class='clearfix nav_box'>
+        <!--<li>-->
+            <!--<a href="#">-->
+                <!--<img src="images/ic_search.png" alt="">-->
+            <!--</a>-->
+            <!--<p>比价搜索</p>-->
+        <!--</li>-->
+        <script type='text/html' id='index_tmp'>
+            {{each result v i}}
+            <li>
+                <a href={{v.titlehref}} id={{v.indexmenuId}}>
+                    {{#v.img}}
+                    <p>{{v.name}}</p>
+                </a>
+
+            </li>
+            {{/each}}
+        </script>
+    </ul>
+</div>
+<!--导航栏结束-->
+
+<!--折扣开始-->
+<div class='discount clearfix'>
+    <div class='count_content'>超值折扣推荐</div>
+    <div class='count_link'>
+        <a href="#">
+            <img src="images/more.png" alt="">
+        </a>
+    </div>
+</div>
+<!--折扣结束-->
+
+<!--商品开始-->
+<div class='product'>
+    <ul class='product_box'>
+        <!--<li>-->
+            <!--<div class="product_img">-->
+                <!--<a href="#">-->
+                    <!--<img src="" alt="">-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="product_content">-->
+                <!--<div class="product_price">-->
+                    <!--移动端凑单品：海天 鲜味 生抽 1.28L-->
+                    <!--<span>10.9元</span>-->
+                <!--</div>-->
+                <!--<div class='product_date clearfix'>-->
+                    <!--<div class='p_date'>京东商城 | 10-25 14:10</div>-->
+                    <!--<div class='product_comment'><i class='paroduct_msg'></i>有1人评论</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+        <script type='text/html' id='product_tmp'>
+            {{each result v i}}
+            <li data-id={{v.productId}}>
+                <div class="product_img">
+                    <a href="#">
+                        {{#v.productImgSm}}
+                    </a>
+                </div>
+                <div class="product_content">
+                    <div class="product_price">
+                        {{v.productName}}
+                        <span>{{v.productPinkage}}</span>
+                    </div>
+                    <div class='product_date clearfix'>
+                        <div class='p_date'>{{v.productTime}}</div>
+                        <div class='product_comment'><i class='paroduct_msg'></i>{{v.productComCount}}</div>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+        </script>
+    </ul>
+</div>
+<!--商品结束-->
+
+<!--更多信息开始-->
+<div class="more_info">
+    <a href="#">
+        更多优惠信息>>
+    </a>
+</div>
+<!--更多信息结束-->
+<!--品牌排行开始-->
+<div class='discount clearfix'>
+    <div class='count_content'>品牌排行</div>
+    <div class='count_link'>
+        <a href="#">
+            <img src="images/more.png" alt="">
+        </a>
+    </div>
+</div>
+<!--品牌排行结束-->
+
+<!--注册登录开始-->
+<footer>
+    <div class="login">
+        <ul>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#"><i class='login_back'>回到顶部</i></a></li>
+        </ul>
+    </div>
+    <div class='footer_download'>
+        <div>
+            <a href="#" class='down'>手机APP下载</a>
+            <a href="#" class='mobile'>慢慢买手机版</a>
+            <a href="#" class='compare'>--掌上比价平台</a>
+        </div>
+        <div>
+            <a href="#">
+                m.manmanbuy.com
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!--注册登录结束-->
+
+</body>
+<script src='js/jquery-1.12.4.js'></script>
+<script src='lib/art/template-web.js'></script>
+
+<script src='js/index.js'></script>
+
+
+</html>

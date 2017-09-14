@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--flexible css 初始化-->
+    <script src='lib/flexible/flexible_css.js'></script>
+    <!--flexible适配插件-->
+    <script src='lib/flexible/flexible.js'></script>
+    <link rel="stylesheet" href="css/productlist.css">
+</head>
+<body>
+<!--头部开始-->
+<header>
+    <div class="h_buy">
+        <a href="#">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="h_downLoad">
+        <a href="#">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<!--头部结束-->
+
+<!--搜索框开始-->
+<div class="search">
+    <div class="search_s">
+        <input type="text" class='search_content' placeholder='请输入你想比较的商品'>
+        <input type="button" class='s_b' value='搜索'>
+    </div>
+</div>
+<!--搜索框结束-->
+
+<div class="classifyList">
+    <a href="index.html">首页 > </a>
+    <a href="category.html"> 全部分类 > </a>
+    <a href="" class='proContent'> 影院 </a>
+</div>
+<div class='product'>
+    <ul class='product_box'>
+        <script type='text/html' id='page_tmp'>
+            {{each result v i}}
+            <li>
+                <div class="product_img">
+                    <a href="product.html?id={{v.productId}}">
+                        {{#v.productImg}}
+                    </a>
+                </div>
+                <div class="product_content">
+                    <div class="product_price">
+                        {{v.productName}}
+                    </div>
+                    <div class='pricep'>{{v.productPrice}}</div>
+                    <div class='product_date clearfix'>
+                        <div class='p_date'>{{v.productQuote}}</div>
+                        <div class='product_comment'><i class='paroduct_msg'></i>{{v.productCom}}</div>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+        </script>
+        <!--<li>-->
+            <!--<div class="product_img">-->
+                <!--<a href="#">-->
+                    <!--<img src="" alt="">-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="product_content">-->
+                <!--<div class="product_price">-->
+                    <!--飞利浦(Philips) HTB3551/93 5.1声道立柱式影院-->
+                <!--</div>-->
+                <!--<div class='pricep'>￥2290</div>-->
+                <!--<div class='product_date clearfix'>-->
+                    <!--<div class='p_date'>报价（7）</div>-->
+                    <!--<div class='product_comment'><i class='paroduct_msg'></i>评论（666）</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+
+    </ul>
+    <div class='page clearfix'>
+        <div class="prev">上一页</div>
+        <div class="select">
+            <select name="pages" id="pages">
+
+                <option value="1-2">1-2</option>
+                <option value="2-2">2-2</option>
+            </select>
+        </div>
+        <div class="next">下一页</div>
+    </div>
+</div>
+
+
+<!--注册登录开始-->
+<footer>
+    <div class="login">
+        <ul>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#"><i class='login_back'>回到顶部</i></a></li>
+        </ul>
+    </div>
+    <div class='footer_download'>
+        <div>
+            <a href="#" class='down'>手机APP下载</a>
+            <a href="#" class='mobile'>慢慢买手机版</a>
+            <a href="#" class='compare'>--掌上比价平台</a>
+        </div>
+        <div>
+            <a href="#">
+                m.manmanbuy.com
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!--注册登录结束-->
+</body>
+<script src='js/jquery-1.12.4.js'></script>
+<script src='lib/art/template-web.js'></script>
+<script src='js/model.js'></script>
+<script src='js/productlist.js'></script>
+<script type='text/html' id='page'>
+{{each arr v i}}
+    <option value='{{i+1}}'>第{{i+1}}页</option>
+{{/each}}
+</script>
+
+</html>

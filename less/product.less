@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import "model";
+//三级导航
+.classifyList {
+  height: 58*@rem;
+  padding: 0 14*@rem;
+  background-color: #5a5a5a;
+  a {
+    display: block;
+    float: left;
+    height: 58*@rem;
+    line-height: 58*@rem;
+    color: #fff;
+    .font-size(16);
+    margin-left: 5*@rem;
+  }
+}
+
+//产品内容
+.product {
+  td{
+    padding: 5*@rem;
+  }
+  .product_img {
+
+    width: 230*@rem;
+    height: 230*@rem;
+    margin: 30*@rem auto 20*@rem;
+    border: 1px solid black;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .product_content {
+    .font-size(16);
+    color: #575757;
+    margin-left: 20*@rem;
+  }
+  .product_list {
+    margin-top: 10*@rem;
+    li {
+      float: left;
+      width: 33.33%;
+      text-align: center;
+      background-color: #ffbb00;
+      padding: 16*@rem 0;
+      border: 1px solid #c14d00;
+      a {
+        .font-size(14);
+      }
+    }
+    li:nth-child(1){
+      background-color: #ff9000;
+    }
+    li:nth-child(1),li:nth-child(2){
+      border-right: none;
+    }
+  }
+  .buy{
+    li{
+      height: 48*@rem;
+      line-height:48*@rem ;
+      float: left;
+      width: 25%;
+      text-align: center;
+    }
+   .buyImage{
+     width: 20*@rem;
+     height: 22*@rem;
+     display: block;
+     margin: 13*@rem auto 0;
+   }
+  }
+  .goBuy{
+    display: block;
+    width: 56*@rem;
+    height: 24*@rem;
+    background-color: #ff5500;
+    line-height:24*@rem ;
+    margin:12*@rem auto 0 ;
+    color: #ffffff;
+    border-radius: 5*@rem;
+    .font-size(14);
+  }
+}
+
+//网友评价
+.evalHeader{
+  height: 54*@rem;
+  line-height: 54*@rem;
+  text-align: center;
+  .font-size(16);
+  background-color: #dbdbdb;
+  border-top: 5*@rem solid #7a7a7a;
+}
+.evalContent{
+  padding: 40*@rem 20*@rem 20*@rem;
+  li{
+    margin-bottom: 20*@rem;
+  }
+  .phone{
+    span{
+      display: block;
+      float: left;
+      width: 50%;
+      height: 25*@rem;
+      line-height: 25*@rem;
+      color: #999;
+      .font-size(14);
+    }
+    span:nth-child(2){
+      text-align: right;
+    }
+  }
+  .sn{
+    height: 25*@rem;
+    line-height: 25*@rem;
+    text-align: right;
+    color: #999;
+    .font-size(14);
+  }
+  .text{
+    line-height: 0.586652rem;
+    .font-size(14);
+    padding-top: 0.13333rem;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+  }
+}
+//更多评价
+.moreText{
+  height: 71*@rem;
+  padding: 15*@rem;
+  .moreTextX{
+    background-color: #f4f4f4;
+    border: 1px solid #999;
+    height: 43*@rem;
+    line-height: 43*@rem;
+    .font-size(14);
+    text-align: center;
+  }
+}
+
+

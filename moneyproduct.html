@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--flexible css 初始化-->
+    <script src='lib/flexible/flexible_css.js'></script>
+    <!--flexible适配插件-->
+    <script src='lib/flexible/flexible.js'></script>
+    <link rel="stylesheet" href="css/moneyproduct.css">
+</head>
+<body>
+<!--头部开始-->
+<header>
+    <div class="h_buy">
+        <a href="moneyctrl.html" class='mh-back'>
+            <
+        </a>
+    </div>
+    <div class='moneyCrl'>国内折扣</div>
+    <div class="h_downLoad">
+        <a href="#">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<!--头部结束-->
+
+<!--搜索框开始-->
+<div class="search">
+    <div class="search_s">
+        <input type="text" class='search_content' placeholder='请输入你想比较的商品'>
+        <input type="button" class='s_b' value='搜索'>
+    </div>
+</div>
+<!--搜索框结束-->
+
+<!--折扣商品开始-->
+<div class="discount">
+    <div>
+        <h3 class="discountName">
+            双11预售：日本进口尤妮佳/Moony婴儿纸尿裤M64*3包
+        </h3>
+        <p class='price'>25元定金+185元尾款</p>
+        <ul class='sb clearfix'>
+            <li>天猫商城</li>
+            <li>10-25 13:57</li>
+            <li>zjie / 慢慢买</li>
+            <li>
+                <a href="#" class='comment'>有2人评论</a>
+            </li>
+        </ul>
+    </div>
+    <div class="disContent">
+        <div class="pic">
+            <img src="" alt="" class='picImg'>
+        </div>
+
+            天猫国际现预售价225元，定金25元，膨胀后可抵用40元，这样尾款仅需支付185元，相当于210元到手。
+
+        <div class="lpic">
+            <img src="" alt="" class='lpicImg'>
+        </div>
+    </div>
+    <div class="city"></div>
+    <div class="gobuy">
+        <a href="#">
+            前往购买
+        </a>
+    </div>
+    <div class="commentX">
+        <h3>发表评论</h3>
+        <div>
+            <textarea name="comment" id="comment" ></textarea>
+            <div class='publish'>
+                <input type="button" value='发表评论'>
+            </div>
+        </div>
+    </div>
+</div>
+<!--折扣商品结束-->
+
+
+<!--注册登录开始-->
+<footer>
+    <div class="login">
+        <ul>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#"><i class='login_back'>回到顶部</i></a></li>
+        </ul>
+    </div>
+    <div class='footer_download'>
+        <div>
+            <a href="#" class='down'>手机APP下载</a>
+            <a href="#" class='mobile'>慢慢买手机版</a>
+            <a href="#" class='compare'>--掌上比价平台</a>
+        </div>
+        <div>
+            <a href="#">
+                m.manmanbuy.com
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!--注册登录结束-->
+</body>
+<script src='js/jquery-1.12.4.js'></script>
+<script src='lib/art/template-web.js'></script>
+<script src='js/model.js'></script>
+<script src='js/moneyproduct.js'></script>
+<script type='text/html' id='tmp1'>
+    {{each result v i}}
+    <div>
+        <h3 class="discountName">
+            {{v.productName}}
+        </h3>
+        <p class='price'>{{v.productPinkage}}</p>
+        <ul class='sb clearfix'>
+            <li>{{v.productFrom}}</li>
+            <li>{{v.productTime}}</li>
+            <li>{{v.productTips}}</li>
+            <li>
+                <a href="#" class='comment'>{{v.productComCount}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="disContent clearfix">
+        <div class="pic">
+            {{#v.productImgSm}}
+        </div>
+            {{v.productInfo2}}
+
+        <div class="lpic">
+            {{#v.productImgLg}}
+        </div>
+    </div>
+    <div class="city">
+        {{#v.productCity}}
+    </div>
+    <div class="gobuy">
+        <a href="#">
+            前往购买
+        </a>
+    </div>
+
+    <h3 class='ss'>发表评论</h3>
+    <div class="commentX">
+
+        <div>
+            <textarea name="comment"></textarea>
+            <div class='publish'>
+                <input type="button" value='发表评论'>
+            </div>
+        </div>
+    </div>
+    <div class="commentInfo">
+        {{#v.productComment}}
+    </div>
+    <div class="classifyList">
+        <a href="index.html">首页 > </a>
+        <a href="moneyctrl.html"> 国内折扣 > </a>
+        <a href="" class='proContent'> {{v.productName}} </a>
+    </div>
+    {{/each}}
+</script>
+
+</html>

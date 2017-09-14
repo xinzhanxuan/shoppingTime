@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@import "base";
+@import "px2rem";
+//分类
+.classify {
+  padding: 15*@rem;
+  ul {
+    border-radius: 10*@rem;
+    li {
+      //height: 58*@rem;
+      //line-height:58*@rem;
+      //padding: 0 20*@rem;
+    }
+    li:nth-child(1) .classify_tit {
+      border-top-left-radius: 5*@rem;
+      border-top-right-radius: 5*@rem;
+    }
+    li:last-child .classify_tit {
+      border-bottom-left-radius: 5*@rem;
+      border-bottom-right-radius: 5*@rem;
+    }
+  }
+  .classify_tit {
+    padding: 0 20*@rem;
+    height: 58*@rem;
+    line-height: 58*@rem;
+    background-color: #eee;
+    border-bottom: 1px solid #bbb;
+    a {
+      .font-size(16);
+      font-weight: bold;
+      color: #000;
+    }
+  }
+  .classify_info {
+    ul {
+      li {
+        background-color: #fff;
+        float: left;
+        width: 33.33%;
+        height: 58*@rem;
+        line-height: 58*@rem;
+        border: 1px solid #cccccc;
+        text-align: center;
+        a {
+          color: #333;
+
+        }
+      }
+      li {
+        border-top: none;
+      }
+      li:nth-child(3n + 1) {
+       border-right: none;
+    }
+      li:nth-child(3n + 2) {
+        border-right: none;
+      }
+      li:last-child{
+        border-right: 1px solid #cccccc;
+      }
+
+    }
+
+  }
+}

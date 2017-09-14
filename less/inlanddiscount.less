@@ -1,0 +1,75 @@
+@charset "UTF-8";
+@import "model";
+
+//头部
+header{
+  position: relative;
+  .h_buy,.h_downLoad{
+    position: absolute;
+  }
+  .h_buy{
+    height: 100%;
+    left: 24*@rem;
+    top: 0;
+    margin-left: 0;
+    margin-top: 0;
+    a{
+      display: block;
+      height: 100%;
+      line-height: 63*@rem;
+      .font-size(32);
+      color: white;
+      font-family: inco;
+    }
+  }
+  .h_downLoad{
+    height: 100%;
+    right: 10*@rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .moneyCrl{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    .font-size(16);
+    color: white;
+    line-height: 63*@rem;
+  }
+}
+
+//产品列表
+.inlandContent{
+  ul{
+    li{
+      float: left;
+      width: 50%;
+      img{
+        display: block;
+        width: 201*@rem;
+        height: 201*@rem;
+        margin: 14*@rem 81*@rem;
+      }
+      h3{
+        font-weight: bold;
+        .font-size(14);
+        color: #333;
+        line-height: 60*@rem;
+        height: 60*@rem;
+        overflow: hidden;
+        word-break: break-all;
+      }
+      .desc{
+        padding: 14*@rem 14*@rem;
+        .jd{
+          margin-top: 10*@rem;
+        }
+        .money{
+          color: red;
+        }
+      }
+
+
+    }
+  }
+}

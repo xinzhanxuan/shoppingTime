@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src='js/jquery-1.12.4.js'></script>
+<script>
+   $.getJSON('http://192.168.23.70:9090/api/getindexmenu',function (info) {
+       console.log(info.result[0].img);
+       document.body.innerHTML = info.result[0].img;
+   })
+</script>
+</body>
+</html>

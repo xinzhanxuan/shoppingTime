@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--flexible css 初始化-->
+    <script src='lib/flexible/flexible_css.js'></script>
+    <!--flexible适配插件-->
+    <script src='lib/flexible/flexible.js'></script>
+    <link rel="stylesheet" href="css/coupon.css">
+</head>
+<body>
+<!--头部开始-->
+<header>
+    <div class="h_buy">
+        <a href="index.html" class='mh-back'>
+            <
+        </a>
+    </div>
+    <div class='moneyCrl'>白菜价-淘宝内部券</div>
+    <div class="h_downLoad">
+        <a href="#">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<!--头部结束-->
+
+<!--优惠券开始-->
+<div class="coupon">
+    <ul class='clearfix couponBox'>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <p>肯德基</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <p>肯德基</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <p>肯德基</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <p>肯德基</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+                <p>肯德基</p>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<!--优惠券结束-->
+
+
+
+<!--注册登录开始-->
+<footer>
+    <div class="login">
+        <ul>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#"><i class='login_back'>回到顶部</i></a></li>
+        </ul>
+    </div>
+    <div class='footer_download'>
+        <div>
+            <a href="#" class='down'>手机APP下载</a>
+            <a href="#" class='mobile'>慢慢买手机版</a>
+            <a href="#" class='compare'>--掌上比价平台</a>
+        </div>
+        <div>
+            <a href="#">
+                m.manmanbuy.com
+            </a>
+        </div>
+    </div>
+</footer>
+<!--注册登录结束-->
+</body>
+<script src='js/jquery-1.12.4.js'></script>
+<script src='lib/art/template-web.js'></script>
+<script src='lib/iscroll/iscroll.js'></script>
+<script src='js/model.js'></script>
+<script src='js/coupon.js'></script>
+<script type='text/html' id='tmp1'>
+    {{each result v i}}
+    <li>
+        <a href="{{v.couponLink}}?id={{v.couponId}}">
+            <img src={{v.couponImg}} alt="">
+            <p>{{v.couponTitle}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+</html>

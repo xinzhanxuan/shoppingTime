@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@import "model";
+//头部
+header {
+  position: relative;
+  background-color: #f4483e;
+  .h_buy, .h_downLoad {
+    position: absolute;
+  }
+  .h_buy {
+    height: 100%;
+    left: 24*@rem;
+    top: 0;
+    margin-left: 0;
+    margin-top: 0;
+    a {
+      display: block;
+      height: 100%;
+      line-height: 63*@rem;
+      .font-size(32);
+      color: white;
+      font-family: inco;
+    }
+  }
+  .h_downLoad {
+    height: 100%;
+    right: 10*@rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .moneyCrl {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    .font-size(16);
+    color: white;
+    line-height: 63*@rem;
+  }
+}
+
+//导航
+.nav{
+  overflow: hidden;
+  border-bottom: 8px solid #f1f1f1;
+  .nav_box{
+    margin-left: 20*@rem;
+    width: 200%;
+    li{
+      float: left;
+      height: 55*@rem;
+      line-height: 55*@rem;
+      padding: 0 7*@rem;
+      a{
+        .font-size(14);
+        display: block;
+        height: 100%;
+        padding: 0 10*@rem;
+      }
+    }
+    .flag{
+      border-bottom: 2px solid red;
+      a{
+        color: red;
+      }
+    }
+
+  }
+}
+
+//商品
+.product {
+  ul {
+    li {
+      padding: 20*@rem 20*@rem;
+      //border: 1px solid red;
+      height: 184*@rem;
+      position: relative;
+      width: 100%;
+      .product_img {
+        position: absolute;
+        a {
+          display: block;
+          img {
+            display: block;
+            width: 144*@rem;
+            height: 144*@rem;
+            //margin-top: 10*@rem;
+          }
+        }
+      }
+
+      .product_content {
+        height: 100%;
+        margin-left: 144*@rem;
+        padding-left: 20*@rem;
+        .product_price {
+          margin-top: 10*@rem;
+          .font-size(14);
+          span {
+            color: #ff6c00;
+          }
+        }
+
+        .product_date {
+          //margin-top: 70*@rem;
+          .font-size(12);
+          color: gray;
+          .product_date {
+            float: left;
+          }
+          .product_comment {
+            float: right;
+            padding-left: 26*@rem;
+            position: relative;
+            .paroduct_msg {
+              position: absolute;
+              width: 22*@rem;
+              height: 20*@rem;
+              left: 0;
+              background: url('../images/comment.svg') no-repeat center;
+              top: -3*@rem;
+            }
+
+          }
+
+        }
+      }
+      .product_content>div{
+        margin-top: 10*@rem;
+      }
+
+    }
+  }
+  //获取数据的样式修改
+  .moneyBack{
+    color: #fc353a;
+    font-size: 24px;
+    padding-top: 0.053332rem;
+    position: relative;
+    em{
+      .font-size(12);
+    }
+    del{
+      color: #a8a8a8;
+      margin-left: 20*@rem;
+      .font-size(14);
+    }
+  }
+  .curly{
+    .bar{
+      i{
+        height: 18*@rem;
+        width: 2.186612rem;
+        border: 1px solid #fc353a;
+        border-radius: 6px;
+        color: #fff;
+        font-weight: 900;
+        background: #ffb7b7;
+        text-align: center;
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        em{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          border-radius: 5px;
+          background: #fc353a;
+          display: block;
+          transition: all 0.3s cubic-bezier(0.39, 0.58, 0.57, 1);
+        }
+        span{
+          .font-size(12);
+          line-height: 18*@rem;
+          display: block;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          position: absolute;
+          font-style: normal;
+          top: 0;
+          left: 0;
+        }
+      }
+      b{
+        font-weight: normal;
+        .font-size(12);
+        margin-left: 15*@rem;
+        color: #fc353a;
+      }
+    }
+
+  }
+  .p_date{
+    float: left;
+    a{
+      width: 158*@rem;
+      height: 37*@rem;
+      line-height: 37*@rem;
+      text-align: center;
+      color: #e4393c;
+      display: block;
+      border: 1px dotted #e4393c;
+    }
+  }
+  .product_comment{
+    a{
+      color: #fff;
+      display: block;
+      background: #ff5e5d;
+      height: 36*@rem;
+      line-height: 36*@rem;
+      width: 79*@rem;
+      text-align: center;
+      border-radius: 0.066665rem;
+    }
+  }
+}
